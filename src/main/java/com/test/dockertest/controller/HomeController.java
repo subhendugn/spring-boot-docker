@@ -10,7 +10,7 @@ public class HomeController {
 	
 	@GetMapping("/api")
 	public String index() {
-		return "Hello Docker";
+		return "<h1>Hello From Spring Boot!!</h1>";
 	}
 
 }
