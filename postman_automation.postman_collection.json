@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "d68bed40-f5bf-4e19-a5e6-e093dbc758a4",
+		"name": "postman_automation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://{{base_url}}:8080/users/add",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bb3fb68f-969a-4549-9ce9-409724f7b872",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Shoobha2\",\n\t\"email\": \"Shoobha.GuhaNeogi@ellucian.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-15-206-166-159.ap-south-1.compute.amazonaws.com:8080/users/add",
+					"protocol": "http",
+					"host": [
+						"ec2-15-206-166-159",
+						"ap-south-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
