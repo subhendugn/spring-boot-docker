@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "http://{{base_url}}:8080/users/add",
+			"name": "http://ec2-15-206-166-159.ap-south-1.compute.amazonaws.com:8080/users/add",
 			"event": [
 				{
 					"listen": "test",
